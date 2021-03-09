@@ -1,0 +1,552 @@
+/* ASTERISCO QUER DIZER PEGAR TODOS ELEMENTOS*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*BOOTCSS*/
+/*ESTILIZAÇÃO PADRÃO*/
+html,body{
+height: 100%;
+}
+
+img{
+    width: 100%;
+    max-width: 700px;
+}
+
+.center{
+    max-width: 1280px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+.w33{
+    width: 33.3%;
+    padding: 0 10px;
+}
+
+.w50{
+    padding: 0 10px;
+    width: 50%; 
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+/**Estilização do site*/
+
+/*ESTILIZAÇÃO DA HEADER*/
+header {
+    padding: 20px 0;
+    background-color:darkcyan;
+}
+
+header .logo{
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    
+
+}
+
+#logo{
+    width: 80px;
+    height: 30px;
+}
+
+/*ESTILIZAÇÃO QUANDO FOR MOBILE*/
+.mobile{
+    display: none;
+}
+
+/*ESTILIZAÇÃO DO MENU DESKTOP UL*/
+nav.desktop ul {
+    list-style-type: none;
+    position: relative;
+    margin-top: 6px;
+}
+
+/*ESTILIZAÇÃO DO MENU DESKTOP LISTA*/
+nav.desktop li {
+    font-weight: 300;
+    font-size: 15px;
+    padding:  0 30px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/*ESTILIZAÇÃO DO MENU TEXTO EM DESKTOP*/
+nav.desktop a {
+    color: white;
+    text-decoration: none;
+}
+
+nav.desktop a:hover{
+    transition: 2s;
+    color: rgb(234, 236, 241);
+    text-shadow: black 2px 2px 2px;
+}
+
+
+/*ESTILIZAÇÃO DO BANNER E FOTO*/
+section.banner-container{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+
+/*BANNER SINGLE*/
+.banner-single{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+   z-index: 1;
+}
+
+/*OPACIDADE DA FOTO DO BANNER*/
+.overlay{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.6);
+}
+
+/*ESTILIZAÇÃO DAS BOLINHAS DO SLIDERS
+
+.bullets{
+    position: absolute;
+    z-index: 5;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+
+.bullets span{
+    margin: 0 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(58, 75, 97);
+    display: inline-block;
+}
+
+.bullets span.active-slider{
+    background: #ccc;
+}
+*/
+/*ESTILIZAÇÃO DO FORMULÁRIO*/
+
+section.banner-container form{
+    width: 91%;
+    max-width: 600px;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%);
+}
+
+/*ESTILIZAÇÃO DO TITULO DO FORMULÁRIO*/
+section.banner-container form h2 {
+    color: white;
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+}
+
+/*ESTILIZACAO DO CAMPO INPUT EMAIL*/
+section.banner-container form input[type=email] {
+    width: 100%;
+    height: 66px;
+    background: white;
+    color: #333;
+    font-size: 22px;
+    padding-left: 10px;
+    margin-top: 10px;
+    border: 0;
+    
+}
+
+/*ESTILIZAÇÃO DO BOTÃO CADASTRAR*/
+section.banner-container form input[type=submit] {
+    width: 100%;
+    height: 66px;
+    background:darkcyan;
+    color: #333;
+    font-size: 22px;
+    padding-left: 10px;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+    border: 0;   
+}
+
+/*ESTILIZACAO DA SEÇÃO AUTOR COM PADDING*/
+section.descricao-autor {
+    padding: 50px 0;
+}
+
+/*ESTILIZAÇÃO DO TITULO DO AUTOR*/
+section.descricao-autor h2 {
+    font-size: 35px;
+    color: darkgray;
+    text-shadow: black 1px 1px;
+    font-weight: 400;
+}
+
+/*ESTILIZAÇÃO DO TEXTO E PARAGRAFOS*/
+section.descricao-autor p {
+    color: darkgray;
+    text-shadow: black 1px 0px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/*ESTILIZAÇÃO DA 404 NOT FOUND*/
+
+/*ESTILIZACAO DA FOOTER E LOGICA PARA APARECER FIXADO*/
+
+footer.fixed{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/*ESTILZAÇÃO DO TITULO E ICONE*/
+section.erro-404 h2{
+   text-align: center;
+   color: #444;
+   font-weight: 400;
+   display: block;
+   font-size: 30px;
+}
+
+/*ESTILIZACAO DO PARÁGRAFO*/
+section.erro-404 p {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 8px;
+    color: #444;
+}
+
+/*ESTILIZACAO DO LINK DA PAGINA INICIAL*/
+section.erro-404 a{
+    color: #444;
+}
+
+/*ESTILIZACAO DA DIV WRRAPPER*/
+.wrapper-404{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    max-width: 1280px;
+    transform: translateY(-50%);
+}
+
+#map{
+    width: 100%;
+    height: 252px;
+}
+
+
+/*ESTILIZANDO A PÁGINA DE CONTATO*/
+.contato-container{
+    text-align: center;
+    padding: 30px 0;
+}
+
+.contato-container input[type=text]{
+    padding-left: 8px 0;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: #444;
+    border: 1px solid #ccc;
+    margin: 6px;
+    max-width: 500px;
+}
+.contato-container textarea{
+    padding-left: 8px 0;
+    width: 100%;
+    height: 120px;
+    font-size: 16px;
+    color: #444;
+    border: 1px solid #ccc;
+    margin: 6px;
+    max-width: 500px;
+    resize: vertical;
+}
+
+
+.contato-container input[type=submit]{
+    margin: 12px;
+    width: 150px;
+    height: 80px;
+    cursor: pointer;
+    background-color:darkcyan;
+    color: white;
+}
+
+.contato{
+    top: 50%;
+    width: 100%;
+    max-width: 1280px;
+}
+
+
+
+/*RESPONSIVIDADE PEGANDO A CLASS W50 E ALINAHNDO DE ACORDO COM A TELA*/
+/*QUANDO USAMOS IMPORTANT QUEREMOS FORÇAR O USO DAQUELA ´PARTE DO CSS*/
+@media screen and (max-width: 768px){
+    img{
+        float: none !important;
+        display: block;
+        margin: 0 auto;      
+    }
+    .w50{
+        padding: 20px;
+        width: 100%;
+    }
+
+    .w33{
+        padding: 20px;
+        width: 100%;
+    }
+    .box-especialidade{
+        padding: 40px 20px;
+        margin: 0;
+    }
+
+}
+
+/*RESPONSIVIDADE PEGANDO A CLASS W50 E ALINAHNDO DE ACORDO COM A TELA*/
+/*QUANDO USAMOS IMPORTANT QUEREMOS FORÇAR O USO DAQUELA ´PARTE DO CSS*/
+@media screen and (max-width: 700px){
+
+    /*MENU NO DESKTOP*/
+    nav.desktop{
+        display: none;
+    }
+
+    /*MENU MOBILE*/
+    nav.mobile{
+        display: block;
+    }
+
+    /*BOTAO DO MENU MOBILE*/
+    .botao-menu-mobile{
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+
+    /*LISTAGEM DO MENU MOBILE*/
+    nav.mobile ul {
+        top: 55px;
+        z-index: 3;
+        display: none;
+        position: absolute;
+        left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    /*DESCRIÇÕES DO MENU MOBILE*/
+    nav.mobile li {
+        font-size: 17px;
+        display: block;
+        background: white;
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+        padding: 8px 0;
+        font-weight: 300;
+    }
+
+    /*LINKS DO MENU MOBILE*/
+    nav.mobile li a {
+        display: block;
+        color:#444;
+        text-decoration: none;
+    }
+}
+
+/*SECTION ESPECIALIDADES*/
+
+
+/*PERSONALIZAÇÃO DA SEÇÃO ESPECIALIDADES DIV FUNDO*/
+section.especialidades{
+    padding: 30px 0;
+    background: lightgrey;
+}
+
+/*ESTILIZAÇÃO DO TITULO DA SEÇÃO*/
+section.especialidades h2.title {
+    font-size: 40px;
+    font-weight: 400;
+    color:darkgrey;
+    text-align: center;
+}
+
+/*ESTILIZAÇÃO PADRÃO DO BOX*/
+.box-especialidade{
+    margin: 40px 0;
+    padding: 0 30px;
+}
+
+/*ESTILIZAÇÃO DOS ICONES DA SEÇÃO*/
+.box-especialidade h3{
+    text-align: center;
+    color: grey;
+    font-size: 35px;
+}
+
+/*ESTILIZAÇÃO DA DESCRIÇÃO DOS ICONES*/
+.box-especialidade h4{
+    text-align: center;
+    color:darkgrey;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+/*ESTILIZAÇÃO DA DESCRIÇÃO DA ESPECIALIDADE*/
+.box-especialidade p{
+    color: black;
+    font-size: 15px;
+    margin-top: 12px;
+}
+
+/*SEÇÃO DEPOIMENTOS EXTRAS*/
+
+
+section.extras{
+    padding: 30px 0;
+    background: darkcyan;
+}
+
+.servicos-container,.depoimentos-container{
+    padding: 0 50px;
+}
+
+section.extras .title{
+    color: white;
+    font-weight: 500;
+    padding-bottom: 20px;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.depoimentos-single{
+    padding: 15px 0;
+    border-bottom: 1px solid cyan;
+}
+
+p.depoimento-descricao{
+    font-size: 15px;
+    color: white;
+    font-weight: 300;
+}
+
+p.nome-autor{
+    padding-top: 10px;
+    color: rgb(1, 31, 18);
+    font-weight: bold;
+}
+
+/*  loading image e resposta */
+
+.overlay-loading{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 550px 0;
+}
+
+.overlay-loading img{
+    position: absolute;
+    width: 200px;
+    height: 54px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.sucesso{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 20px 0%;
+    color: white;
+    background-color: rgb(2, 34, 34);
+    font-weight:bold;
+    font-size: 12px;
+    z-index: 999;
+    display: none;
+}
+.falha{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 20px 0%;
+    color: white;
+    background-color: teal;
+    font-weight: bold;
+    font-size: 12px;
+    z-index: 999;
+    display: none;
+}
+
+
+/*
+SERVIÇOS*/
+
+.servicos ul {
+    margin: 20px 0;
+}
+
+.servicos li {
+    font-size: 15px;
+    color: white;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+/*RODAPÉ*/
+
+footer{
+    background: rgb(58, 75, 97);
+    padding: 30px 0;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+}
